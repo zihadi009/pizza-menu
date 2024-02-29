@@ -143,24 +143,30 @@ function getBook(id) {
     return data.find((d) => d.id === id);
 }
 
-// Spread Operator 
-const book = getBook(2);
-const { title, author, publicationDate } = book;
+const books = getBooks();
 
-// Regular Function 
-function getYear(str) {
-    return str.split('-')[0];
+function getTotalReviewCount(book) {
+    const goodRead = book.reviews?.goodreads.reviewsCount ?? 0;
+    // when everything before ? become undefined then rest will be undefined so we set the default value 0
+    const libraryThing = book.reviews?.librarything?.reviewsCount ?? 0;
+    return goodRead + libraryThing;
 }
-console.log(getYear(publicationDate));
 
-// Arrow Function for one line
-const getPages = (str) => str.split('-')[0];
-console.log(getPages(publicationDate));
 
-// Arrow Function for multiple line ()
-const getTitle = (title, author) => ((
-    `The title is ${title.split(' ')[1]}. 
-     The author name is ${author.split(' ')[0]}.`
-));
+// Map Method
+// The map method will loop over an array and return an new array
+// with the same length, with some operation applied to each
+// of the elements of the original array.
 
-console.log(getTitle(title, author))
+const x = [1, 2, 3, 4, 5].map(el => el * 2);
+console.log(x);
+
+const titles = books.map(book => book.title);
+console.log(titles);
+
+const essentialData = books.map(book => ({
+    title: book.author,
+    author: book.author,
+    reviewsCount: getTotalReviewCount(book)
+}))
+console.log(essentialData)
