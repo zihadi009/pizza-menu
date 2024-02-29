@@ -155,4 +155,5 @@ const books = getBooks();
 const pagesAllBooks = books.reduce((accumulator, currentValue) => (
     accumulator = accumulator + currentValue.pages
 ), 0);
+// Here this 0 is initial value for current value
 console.log(pagesAllBooks);
