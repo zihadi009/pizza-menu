@@ -174,8 +174,8 @@ console.log(book.reviews.librarything.reviewsCount);
 const countWrong = book.reviews.librarything.reviewsCount || "No data";
 console.log(countWrong);
 
-// ?? is called nullish coalescing operator.
-// It will return the second value when the first
+// ??  is called nullish coalescing operator.
+// It will return the second value when the first 
 // value is null or undefined but not when it is zero or an empty string.
 
 const count = book.reviews.librarything.reviewsCount ?? "No Data";
