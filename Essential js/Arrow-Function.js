@@ -163,4 +163,4 @@ const getTitle = (title, author) => ((
      The author name is ${author.split(' ')[0]}.`
 ));
 
-console.log(getTitle(title, author))
+console.log(getTitle(title, author));
