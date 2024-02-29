@@ -143,8 +143,25 @@ function getBook(id) {
     return data.find((d) => d.id === id);
 }
 
+// Rest and Spread Operator 
 const book = getBook(1);
-const { title, pages, author, publicationDate } = book;
+const { genres } = book;
 
-const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${publicationDate.split('-')[0]}`;
-console.log(summary);
+// Rest operator with arrays
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+console.log(primaryGenre, secondaryGenre)
+console.log(otherGenres);
+
+// Spread Operator with arrays
+const newGenres = [...genres, 'epic fantasy'];
+const newGenres1 = ['epic fantasy', ...genres];
+console.log(newGenres, newGenres1);
+
+// Spread Operator with objects
+const updatedBook = { 
+    ...book, 
+    // Adding a new property
+    moviePublicationDate: '2001-12-19', 
+    // Overwriting a new property
+    pages: 1210 };
+console.log(updatedBook);
