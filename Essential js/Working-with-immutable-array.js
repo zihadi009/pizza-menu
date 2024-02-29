@@ -116,7 +116,7 @@ const data = [
         pages: 835,
         translations: {
             korean: "왕좌의 게임",
-            polish: "Gra o tron",
+            polish: "Gra o tron..",
             portuguese: "A Guerra dos Tronos",
             spanish: "Juego de tronos",
         },
