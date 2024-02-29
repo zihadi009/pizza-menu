@@ -114,12 +114,12 @@ function Order({ open, close }) {
 function Pizza({ pizzaObj }) {
   const { photoName, name, ingredients, price } = pizzaObj;
   return <>
-    <li className='pizza'>
+    <li className= {`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
-        <span>{price}</span>
+        <span>{ pizzaObj.soldOut ? "SOLD OUT" : price}</span>
       </div>
     </li>
   </>
