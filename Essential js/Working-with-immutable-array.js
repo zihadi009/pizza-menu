@@ -139,10 +139,6 @@ function getBooks() {
     return data;
 }
 
-function getBook(id) {
-    return data.find((d) => d.id === id);
-}
-
 const books = getBooks();
 
 //These are the ways to change an immutable array
