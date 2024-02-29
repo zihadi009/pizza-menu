@@ -150,7 +150,7 @@ const books = getBooks();
 // Imagine rolling a snowball downhill.
 // The reduce method is like rolling that snowball, 
 // growing bigger as it picks up "snow"(elements) from an array, 
-// ending up as a single "snowball"(result)....
+// ending up as a single "snowball"(result).....
 
 const pagesAllBooks = books.reduce((accumulator, currentValue) => (
     accumulator = accumulator + currentValue.pages
