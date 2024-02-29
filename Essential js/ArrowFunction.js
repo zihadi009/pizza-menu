@@ -145,19 +145,9 @@ function getBook(id) {
 
 // Spread Operator 
 const book = getBook(2);
-const { title, pages, author, publicationDate, hasMovieAdaptation } = book;
-
-// Ternary Operator
-const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
-console.log(`This book has ${pagesRange} pages`)
-
-// Template Literals `` with ternary operator
-const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${publicationDate.split('-')[0]}.
-The book has ${hasMovieAdaptation ? '' : 'not'} been adapted as a movie.`
-console.log(summary);
+const { title, author, publicationDate } = book;
 
 // Regular Function 
-
 function getYear(str) {
     return str.split('-')[0];
 }
