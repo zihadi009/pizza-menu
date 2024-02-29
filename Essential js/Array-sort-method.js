@@ -154,4 +154,4 @@ console.log(ascendingtSort);
 console.log(descendingSort);
 
 const sortedByPages = books.slice().sort((a,b) => a.pages - b.pages);
-sortedByPages;
+console.log(sortedByPages);
