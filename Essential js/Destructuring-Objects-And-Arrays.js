@@ -147,8 +147,8 @@ function getBook(id) {
 // Object Destructuring 
 const book = getBook(2);
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } = book;
-console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation)
+console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation);
 
 // Array Destructuring 
 const [primaryGenre, secondaryGenre] = genres;
-console.log(primaryGenre, secondaryGenre)
+console.log(primaryGenre, secondaryGenre);
