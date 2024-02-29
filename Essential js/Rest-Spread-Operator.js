@@ -160,8 +160,8 @@ console.log(newGenres, newGenres1);
 // Spread Operator with objects
 const updatedBook = { 
     ...book, 
-    // Adding a new property
+    // Adding a new property to the object
     moviePublicationDate: '2001-12-19', 
-    // Overwriting a new property
+    // Overwriting a new property to object
     pages: 1210 };
 console.log(updatedBook);
