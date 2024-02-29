@@ -147,7 +147,7 @@ function getBook(id) {
 const book = getBook(2);
 const { title, pages, author, publicationDate, hasMovieAdaptation } = book;
 
-// Ternary Operator
+// Ternary Operator (condition ? "" : "")
 const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
 console.log(`This book has ${pagesRange} pages`)
 
