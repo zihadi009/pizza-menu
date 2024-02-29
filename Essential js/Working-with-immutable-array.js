@@ -141,7 +141,8 @@ function getBooks() {
 
 const books = getBooks();
 
-//These are the ways to change an immutable array
+// These are the ways to change an immutable array
+// We always need a copy of the original array
 
 // 1) Add book object to array
 const newBook = {
